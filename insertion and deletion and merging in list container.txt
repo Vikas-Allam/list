@@ -1,0 +1,27 @@
+#include<iostream>
+#include<list>
+#include<iterator>
+using namespace std;
+void fun(list<int>arr)
+{
+    list<int>::iterator i;
+    for(i=arr.begin();i!=arr.end();i++)
+      cout<<*i<<" ";
+      cout<<endl;
+}
+int main()
+{
+    list<int>arr,arr2;
+    list<int>::iterator it1;
+    arr.assign({2,3,4,5,6,7});
+    arr2.assign({11,24,35,46,67});
+    
+     cout<<"container after merge is:";
+    arr.merge(arr2);
+        fun(arr);
+        cout<<"container after deletion is:"; 
+ it1=arr.begin();
+    arr.erase(it1);
+    fun(arr);
+}
+          
